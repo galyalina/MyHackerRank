@@ -18,3 +18,20 @@ void preOrder(node *root) {
     preOrder(root->left);
     preOrder(root->right);
 }
+
+void postOrder(node *root) {
+
+	if (root == NULL){
+		return;
+	}
+
+	if (root->left != NULL){
+		postOrder(root->left);		
+	}
+
+	if (root->right != NULL){
+		postOrder(root->right);
+	}
+
+	cout << root->data << " ";
+}
